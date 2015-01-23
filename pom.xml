@@ -6,6 +6,7 @@
 	<version>1.0.1-SNAPSHOT</version>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
+		<testSourceDirectory>test</testSourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -33,4 +34,11 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<organization>
+		<name>anSWerIT</name>
+	</organization>
+	<ciManagement>
+		<system>ScrumDesk</system>
+		<url>http://app.scrumdesk.com/#/projects/1965/backlog/list</url>
+	</ciManagement>
 </project>
