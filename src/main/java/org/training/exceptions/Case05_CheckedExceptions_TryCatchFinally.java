@@ -12,8 +12,8 @@ import org.slf4j.LoggerFactory;
  * @see http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html
  * @see http://docs.oracle.com/javase/tutorial/essential/exceptions/index.html
  */
-public class Case04_CheckedExceptions_TryCatch {
-	private static Logger LOGGER = LoggerFactory.getLogger(Case04_CheckedExceptions_TryCatch.class);
+public class Case05_CheckedExceptions_TryCatchFinally {
+	private static Logger LOGGER = LoggerFactory.getLogger(Case05_CheckedExceptions_TryCatchFinally.class);
 	
 	/**
 	 * @param args
@@ -33,10 +33,20 @@ public class Case04_CheckedExceptions_TryCatch {
 		//and in case something gets wrong, we catch the exception object thrown
 		//by methodWhichFails and we treat it as we like. In this case we simple
 		//show a message and and then print exception details.
-		//Please note that this time we catch Exception instead of RuntimeException
 		catch (Exception e) {
 			//Show a message and print exception details
 			LOGGER.error("We cought a checked exception. Check exception details:", e);
+		}
+		finally {
+			//There are situations when no matter what happens we need to be sure a piece of code 
+			//will be executed. 'finally' block ensures that.
+			//
+			//A very common example of this situation is:
+			//We open a file for writing which means nobody else can open it anymore
+			//until we close it. If something get's wrong we need to be sure the
+			//file will be closed otherwise the access to the file will be blocked forever.
+			//We close the file always in a finally block. We will see that in another example.
+			LOGGER.info("This code is executed no mater what");
 		}
 
 	}
@@ -61,10 +71,10 @@ public class Case04_CheckedExceptions_TryCatch {
 	/**
 	 * This method throws a checked exception. Compared to runtime exceptions,
 	 * the checked exceptions have to be reported to the callers with the
-	 * 'throws' keyword. Try to remove 'throws Exception' and see what happens.
+	 * 'throws' keyword.
 	 * @throws Exception
 	 */
-	public static void methodWhichFails() /*remove from here*/throws Exception /*to here*/{
+	public static void methodWhichFails() throws Exception {
 		LOGGER.info("START");
 
 		//We throw this runtime exception. After we throw this 
