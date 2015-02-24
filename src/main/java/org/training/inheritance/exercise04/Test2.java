@@ -9,5 +9,17 @@ public class Test2 extends Test1 {
 //			C. public float aMethod(float a, float b) throws Exception {...}
 //			D. public float aMethod(float p, float q) {...}
 	
+	public int aMethod(int a, int b) throws Exception {
+		return a + b;
+	}
+	
+	/*public float aMethod(float a, float b) throws Exception {
+		return a + b;
+	}*/
+	
+	public float aMethod(float p, float q) {
+		return p + q;
+	}
+	
 	
 }
