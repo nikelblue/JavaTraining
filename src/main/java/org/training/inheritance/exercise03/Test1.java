@@ -23,4 +23,17 @@ public class Test1 {
 	}
 	
 	//new method here
+	public int aMethod(int a, int b) {
+		return a+b;
+	}
+	
+	public float aMethod(float a, float b, int c) throws Exception {
+		return a + b + c;
+	}
+	
+	private float aMethod(int a, int b, int c) {
+		return a + b + c;
+	}
+	
+	float f = aMethod(1,3,5);
 }
