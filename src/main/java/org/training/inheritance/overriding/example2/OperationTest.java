@@ -3,8 +3,8 @@ package org.training.inheritance.overriding.example2;
 public class OperationTest {
 
 	public static void main(String[] args) {
-		float a = 2.3f;
-		float b = 4.5f;
+		float a = 2.20f;
+		float b = 3.30f;
 		
 		Operation op = new Operation();
 		Sum sum = new Sum();

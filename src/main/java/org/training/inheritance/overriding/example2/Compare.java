@@ -18,10 +18,9 @@ public class Compare extends Operation {
 	 */
 	@Override
 	public Integer apply(float a, float b) {
-		if(a == b)
+		if( Math.abs(a - b) <= 0e+5 )
 			return 0;
-		if(a < b)
-			return -1;
-		return 1;
+
+		return a < b ? -1 : 1;
 	}
 }
