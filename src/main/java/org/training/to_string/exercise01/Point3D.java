@@ -25,4 +25,8 @@ public class Point3D {
 	}
 
 	//TODO: override toString() method accordingly
+	@Override
+	public String toString() {
+		return "[" + x + "," + y +"," + z + "]";
+	}
 }
