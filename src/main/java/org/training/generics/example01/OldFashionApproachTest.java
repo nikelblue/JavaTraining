@@ -33,10 +33,8 @@ public class OldFashionApproachTest {
 
 		
 		//Now, think about the case when we want to box more types (10, 20, 100)
-		//We will have a class explosion. 
-		//
-		//Additionally, each time we want to box another type, we need to create 
-		//another class
+		//We will have a class explosion. Each time we want to box another type, 
+		//we need to create another class and another method to handle it.
 		//
 		//Java offers an elegant method to solve this issue. Please proceed to 
 		//org.training.generics.example02.GenericClassesTest

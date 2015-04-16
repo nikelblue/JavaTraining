@@ -39,8 +39,8 @@ public class GenericClassesTest {
 		//one only. And we can use it to box any kind of object. Very elegant.
 		//
 		//But Java help doesn't end here. Let's have a look at those two methods:
-		//printInteger(Box<integer>)
-		//printString(Box<String>)
+		//printIntegerBox(Box<Integer>)
+		//printStringBox(Box<String>)
 		//
 		//We still need to define a print method for each type we want to box.
 		//Our initial issue seems to be only half fixed.

@@ -4,12 +4,12 @@
 package org.training.generics.example02;
 
 /**
- * Java let's us define a generic class that can actually box anything. As
- * developers we focus on the common operation we have to do wuth the boxed value
+ * Java lets us define a generic class that can actually box anything. As
+ * developers we focus on the common operation we have to do with the boxed value
  * and we don't care about it's type. 
  * 
  * We tell to Box class that it will box any object of the generic type T 
- * (can be named A, B, Monkey, or whatever. we chosen T which stands for 'Type').
+ * (can be named A, B, Monkey, or whatever; we chosen T which stands for 'Type').
  * From now on, instead of using the real type on fields and methods declarations,
  * we use the generic type we just invented: T. 
  * 
