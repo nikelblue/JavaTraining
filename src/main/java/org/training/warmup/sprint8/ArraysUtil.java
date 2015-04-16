@@ -45,8 +45,11 @@ public class ArraysUtil {
 	}
 	
 	public static void sortDescending(String[] strings) {
+		if(strings == null)
+			return;
+		
 		Arrays.sort(strings, new ReverseOrderComparator());
-		System.out.println(Arrays.toString(strings));
+		//System.out.println(Arrays.toString(strings));
 		
 	}
 

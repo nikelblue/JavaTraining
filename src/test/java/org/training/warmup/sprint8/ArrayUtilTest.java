@@ -5,9 +5,6 @@ package org.training.warmup.sprint8;
 
 import static org.junit.Assert.assertArrayEquals;
 
-import java.util.Arrays;
-
-import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -61,8 +58,35 @@ public class ArrayUtilTest {
 	
 	@Test
 	public void testSortDescending5() {
-		String[] expectedArray = {null};
-		String[] actualArray = {null};
+		String[] expectedArray = {null, null};
+		String[] actualArray = {null, null};
+		
+		ArraysUtil.sortDescending(actualArray);
+		assertArrayEquals("Expected array to be sorted descending:", expectedArray, actualArray);
+	}
+	
+	@Test
+	public void testSortDescending6() {
+		String[] expectedArray = {null, "a"};
+		String[] actualArray = {null, "a"};
+		
+		ArraysUtil.sortDescending(actualArray);
+		assertArrayEquals("Expected array to be sorted descending:", expectedArray, actualArray);
+	}
+	
+	@Test
+	public void testSortDescending7() {
+		String[] expectedArray = {null, "a"};
+		String[] actualArray = {"a", null};
+		
+		ArraysUtil.sortDescending(actualArray);
+		assertArrayEquals("Expected array to be sorted descending:", expectedArray, actualArray);
+	}
+	
+	@Test
+	public void testSortDescending8() {
+		String[] expectedArray = null;
+		String[] actualArray = null;
 		
 		ArraysUtil.sortDescending(actualArray);
 		assertArrayEquals("Expected array to be sorted descending:", expectedArray, actualArray);
