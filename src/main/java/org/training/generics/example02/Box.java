@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.training.generics.classes.example02;
+package org.training.generics.example02;
 
 /**
  * Java let's us define a generic class that can actually box anything. As

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.training.generics.classes.example01;
+package org.training.generics.example01;
 
 /**
  * @author nikelblue

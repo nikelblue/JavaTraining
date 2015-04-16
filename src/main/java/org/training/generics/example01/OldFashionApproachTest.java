@@ -1,4 +1,4 @@
-package org.training.generics.classes.example01;
+package org.training.generics.example01;
 
 /**
  * 
@@ -39,7 +39,7 @@ public class OldFashionApproachTest {
 		//another class
 		//
 		//Java offers an elegant method to solve this issue. Please proceed to 
-		//org.training.generics.classes.example01.GenericsTest
+		//org.training.generics.example02.GenericClassesTest
 		//to see how to do it.
 	}
 

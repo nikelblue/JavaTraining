@@ -1,13 +1,13 @@
 /**
  * 
  */
-package org.training.generics.classes.example02;
+package org.training.generics.example02;
 
 /**
  * @author nikelblue
  *
  */
-public class GenericsTest {
+public class GenericClassesTest {
 
 	private static void printIntegerBox(Box<Integer> integerBox) {
 		System.out.println("Integer Value: " + integerBox.getValue());
@@ -50,7 +50,7 @@ public class GenericsTest {
 		//declare one single method for all types we want box. 
 		//
 		//Please proceed to:
-		//org.training.generics.methods.example01.
+		//org.training.generics.example03.GenericMethodsTest
 		
 	}
 
