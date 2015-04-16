@@ -17,7 +17,7 @@ public class OldFashionApproachTest {
 	}
 	
 	public static void main(String[] args) {
-		//We need sometimes to box immutable objects (Numbber, Long, String)
+		//We need sometimes to box immutable objects (Number, Long, String)
 		//into another object.
 		//
 		//If we want to do so, using old fashion approach, we need to create
