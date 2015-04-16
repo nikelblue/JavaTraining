@@ -16,8 +16,13 @@ public class ArraysUtil {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String[] names = {"Angelina Jolie", "Leonardo DiCaprio", "Brad Pitt", "Silvester Stalone"};
-		sortNames(names);
+		//String[] names = {"Angelina Jolie", "Leonardo DiCaprio", "Brad Pitt", "Silvester Stalone"};
+		//sortNames(names);
+		
+		String[] letters = {"a","b", "c"};
+		
+		sortDescending(letters);
+		
 	}
 	
 	
@@ -37,6 +42,12 @@ public class ArraysUtil {
 		
 		System.out.println("The new index of \"Brad Pitt\":" + Arrays.binarySearch(sortedNames, "Brad Pitt"));	
 
+	}
+	
+	public static void sortDescending(String[] strings) {
+		Arrays.sort(strings, new ReverseOrderComparator());
+		System.out.println(Arrays.toString(strings));
+		
 	}
 
 }
