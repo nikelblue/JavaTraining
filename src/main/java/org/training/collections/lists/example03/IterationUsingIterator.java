@@ -1,4 +1,4 @@
-package org.training.lists.example03;
+package org.training.collections.lists.example03;
 
 import java.util.ArrayList;
 import java.util.Arrays;

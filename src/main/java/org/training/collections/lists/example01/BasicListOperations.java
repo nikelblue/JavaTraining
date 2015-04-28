@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.training.lists.example01;
+package org.training.collections.lists.example01;
 
 import java.util.ArrayList;
 import java.util.List;
