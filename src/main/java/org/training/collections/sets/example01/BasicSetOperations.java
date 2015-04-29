@@ -28,7 +28,7 @@ public class BasicSetOperations {
 		//This is an example of a set of integers:
 		Set<Integer> integersSet = new HashSet<Integer>();
 		//
-		//This is an example of a lost of strings:
+		//This is an example of a set of strings:
 		Set<String> stringsSet = new HashSet<String>();
 		
 		//HashSet has a custom toString implementation. This is an advantage 

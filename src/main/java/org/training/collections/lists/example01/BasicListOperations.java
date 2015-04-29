@@ -27,10 +27,10 @@ public class BasicListOperations {
 		//ArrayList is a common implementation of List.
 		//Lists support generics
 		//
-		//This is an example of a lost of integers:
+		//This is an example of a list of integers:
 		List<Integer> integersList = new ArrayList<Integer>();
 		//
-		//This is an example of a lost of strings:
+		//This is an example of a list of strings:
 		List<String> stringsList = new ArrayList<String>();
 		
 		//ArrayList has a custom toString implementation. This is an advantage 
