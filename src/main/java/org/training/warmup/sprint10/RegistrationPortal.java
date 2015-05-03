@@ -37,8 +37,8 @@ public class RegistrationPortal {
 		portal.registerMember(m3); //-> true
 		portal.registerMember(m3); //-> false
 
-		//Member m4 = new Member("Anthony", 35);
-		//portal.registerMember(m4); //-> false
+		Member m4 = new Member("Anthony", 35);
+		portal.registerMember(m4); //-> false
 		System.out.println("registered member: " + portal.getRegisteredMembers());
 	}
 	
