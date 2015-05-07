@@ -9,7 +9,6 @@ public class PersonKey {
 	private String lastName;
 	
 	
-
 	public PersonKey(String firstName, String lastName) {
 		super();
 		this.firstName = firstName;
@@ -36,8 +35,7 @@ public class PersonKey {
 
 	@Override
 	public String toString() {
-		return "PersonKey [firstName=" + firstName + ", lastName=" + lastName
-				+ "]";
+		return firstName + " " + lastName +"n/";
 	}
 	
 	
@@ -79,11 +77,11 @@ public class PersonKey {
 
 		Map<PersonKey, Person> persons = new HashMap<PersonKey, Person>();
 		
-		Person p1 = new Person("Jacky","Chan","M","1958-04-01");
-		Person p2 = new Person("Jet","Li","M","1958-05-01");
+		Person p1 = new Person("Jacky","Chan","jackChan@hotmail.com");
+		Person p2 = new Person("Jet","Li","JetLi@hotmail.com");
 
-		persons.put(p1.getKey(),p1);
-		persons.put(p2.getKey(),p2);
+		//persons.put(p1.getKey(),p1);
+		//persons.put(p2.getKey(),p2);
 		
 		for(Map.Entry<PersonKey, Person> entry : persons.entrySet()) {
 			System.out.println(entry.getKey() + ":" + entry.getValue());

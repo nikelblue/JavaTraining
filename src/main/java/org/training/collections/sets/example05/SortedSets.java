@@ -25,11 +25,19 @@ class SortedSets {
 		System.out.println(sortedStrings); //The strings are sorted out ascending
 		
 		Set<Person> persons = new HashSet<Person>();
-		Person p1 = new Person("Jackie", "Chan");
-		Person p2 = new Person("Bruce", "Lee");
+		//Person p1 = new Person("Jackie", "Chan");
+		//Person p2 = new Person("Bruce", "Lee");
+		//Person p3 = new Person("Eva", "Mendes");
+		//Person p4 = new Person("Eva", "Longoria");
+		
+		Person p1 = new Person("b", "b");
+		Person p2 = new Person("a", "c");
+		Person p3 = new Person("c", "a");
 		
 		persons.add(p1);
 		persons.add(p2);
+		persons.add(p3);
+		//persons.add(p4);
 		System.out.println(persons);
 		
 		//Lets try to add our persons to a TreeSet attempting to sort the persons.
@@ -37,6 +45,8 @@ class SortedSets {
 		Set<Person> sortedPersons = new TreeSet<Person>();
 		sortedPersons.add(p1); 
 		sortedPersons.add(p2);
+		sortedPersons.add(p3);
+		//sortedPersons.add(p4);
 		System.out.println(sortedPersons);
 		//As we remember from previous lessons, to sort an array we need a Comparator
 		//to compare array elements.
