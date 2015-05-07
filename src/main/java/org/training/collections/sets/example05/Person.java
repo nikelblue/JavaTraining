@@ -1,6 +1,6 @@
 package org.training.collections.sets.example05;
 
-final class Person {
+public final class Person implements Comparable<Person>{
 	String firstName;
 	String lastName;
 	
@@ -59,6 +59,21 @@ final class Person {
 	
 	@Override
 	public String toString() {
-		return firstName + " " + lastName;
+		return lastName + " " + firstName;
 	}
+
+	public int compareTo(Person other) {
+	    //which one is greater that the other one
+	   	//for descending order
+		if(other == null)
+			return 1;
+		
+		String fullName = this.lastName + this.firstName;
+		String otherFullName = other.lastName + other.firstName;
+		
+
+		return otherFullName.compareToIgnoreCase(fullName);
+	}
+	
+	
 }

@@ -4,21 +4,13 @@ public class Person {
 
 	private String firstName;
 	private String lastName;
-	private String sex;
-	private String birthdate;
+	private String email;
 	
-	public Person(String firstName, String lastName, String sex,
-			String birthdate) {
+	public Person(String firstName, String lastName, String email) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.sex = sex;
-		this.birthdate = birthdate;
-	}
-	
-	public PersonKey getKey(){
-		PersonKey key = new PersonKey(firstName,lastName);
-		return key;
+		this.email = email;
 	}
 
 	public String getFirstName() {
@@ -37,39 +29,28 @@ public class Person {
 		this.lastName = lastName;
 	}
 
-	public String getSex() {
-		return sex;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-
-	public String getBirthdate() {
-		return birthdate;
-	}
-
-	public void setBirthdate(String birthdate) {
-		this.birthdate = birthdate;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override
 	public String toString() {
-		return "Person [firstName=" + firstName + ", lastName=" + lastName
-				+ ", sex=" + sex + ", birthdate=" + birthdate + "]";
+		return firstName + " " + lastName + ", " + email + "\n";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result
-				+ ((birthdate == null) ? 0 : birthdate.hashCode());
+		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result
 				+ ((firstName == null) ? 0 : firstName.hashCode());
 		result = prime * result
 				+ ((lastName == null) ? 0 : lastName.hashCode());
-		result = prime * result + ((sex == null) ? 0 : sex.hashCode());
 		return result;
 	}
 
@@ -82,10 +63,10 @@ public class Person {
 		if (getClass() != obj.getClass())
 			return false;
 		Person other = (Person) obj;
-		if (birthdate == null) {
-			if (other.birthdate != null)
+		if (email == null) {
+			if (other.email != null)
 				return false;
-		} else if (!birthdate.equals(other.birthdate))
+		} else if (!email.equals(other.email))
 			return false;
 		if (firstName == null) {
 			if (other.firstName != null)
@@ -97,14 +78,10 @@ public class Person {
 				return false;
 		} else if (!lastName.equals(other.lastName))
 			return false;
-		if (sex == null) {
-			if (other.sex != null)
-				return false;
-		} else if (!sex.equals(other.sex))
-			return false;
 		return true;
 	}
 	
 	
+
 	
 }
