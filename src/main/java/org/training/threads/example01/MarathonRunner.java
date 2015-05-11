@@ -9,15 +9,15 @@ import java.util.Random;
  * @author DanielB
  *
  */
-public class MarathonRunner extends Thread {
+class MarathonRunner extends Thread {
 
 
-	//We want to give a name to the thread so we can seasily identify it
+	//We want to give a name to the thread so we can easily identify it
 	public MarathonRunner(String name) {
 		super(name);
 	}
 
-	//This is the magic method we need to ovveride. The logic inside will be executed by thread
+	//This is the magic method we need to override. The logic inside will be executed by thread
 	@Override
 	public void run() {
 		Random r = new Random();

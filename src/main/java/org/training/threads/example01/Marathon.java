@@ -7,7 +7,7 @@ package org.training.threads.example01;
  * @author nikelblue
  *
  */
-public class Marathon {
+class Marathon {
 	 public static void main(String[] args) {
 		//We instantiate two participants to the marathon
 		Thread monkey = new MarathonRunner("Monkey");
