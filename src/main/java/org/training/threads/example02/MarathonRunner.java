@@ -10,6 +10,11 @@ import java.util.Random;
  *
  */
 class MarathonRunner extends Thread {
+	private long finishTime;
+
+	public long getFinishTime(){
+		return this.finishTime;
+	}
 
 
 	//We want to give a name to the thread so we can easily identify it
@@ -21,16 +26,16 @@ class MarathonRunner extends Thread {
 	@Override
 	public void run() {
 		Random r = new Random();
-		for (int i = 0; i < 42; i++) {
+		for (int i = 0; i < 10; i++) {
 			//print a message
 			System.out.printf("%-20s ran %2dKm\n", getName(), Integer.valueOf(i));
 			//and sleep a while (keep running)
 			sleepAWhile(r);		
 		}
+		finishTime = System.currentTimeMillis();
 		System.out.printf("%-20s finished the marathon\n", getName());
 	}
 
-	
 	private void sleepAWhile(Random r) {
 
 		try {
