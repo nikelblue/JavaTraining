@@ -9,7 +9,7 @@ import java.util.Random;
  * @author DanielB
  *
  */
-class MarathonRunner extends Thread {
+public class MarathonRunner extends Thread {
 	private long finishTime;
 
 	public long getFinishTime(){
