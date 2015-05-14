@@ -20,19 +20,12 @@ class MarathonSecondEdition {
 		
 		//There are 5 participants this time. We better improve our code so more participants may be added
 		//at any time without too much effort. So, let's use collections.
-		
-		MarathonRunner Monkey = new MarathonRunner("Monkey");
-		MarathonRunner Cupcake = new MarathonRunner("Cupcake");
-		MarathonRunner Jimmy = new MarathonRunner("Jimmy");
-		MarathonRunner Michael = new MarathonRunner("Michael");
-		MarathonRunner Gary = new MarathonRunner("Gary");		
-		
 		Collection<MarathonRunner> registeredParticipants = new ArrayList<MarathonRunner>();
-		registeredParticipants.add(Monkey);
-		registeredParticipants.add(Cupcake);
-		registeredParticipants.add(Jimmy);
-		registeredParticipants.add(Michael);
-		registeredParticipants.add(Gary);
+		registeredParticipants.add(new MarathonRunner("Monkey"));
+		registeredParticipants.add(new MarathonRunner("Cupcake"));
+		registeredParticipants.add(new MarathonRunner("Jimmy"));
+		registeredParticipants.add(new MarathonRunner("Michael"));
+		registeredParticipants.add(new MarathonRunner("Gary"));
 
 		for (MarathonRunner marathonRunner : registeredParticipants) {
 			marathonRunner.start();
@@ -62,9 +55,4 @@ class MarathonSecondEdition {
 		System.exit(0);
 		
 	}
-
-
-
-		
-	
 }

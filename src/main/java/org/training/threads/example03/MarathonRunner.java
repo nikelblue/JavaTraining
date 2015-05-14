@@ -67,32 +67,20 @@ class MarathonRunner extends Thread implements Comparable<MarathonRunner>{
 
 	
 	public int compareTo(MarathonRunner other) {
-		int result = 0;
 		
 		if(other == null)
-			result = 1;
+			return 1;
 		
-		long finishTime = this.getFinishTime();
-		long otherFinishedTime = other.getFinishTime();
+		return (int)(this.getRunningTime() - other.getRunningTime());
 		
-		if(finishTime == otherFinishedTime)
-			result = 0; //[null, null]
-		
-		if(finishTime > otherFinishedTime)
-			result = 1;
-
-		if(finishTime < otherFinishedTime)
-			result = -1;
-		
-		return result;
 	}
 	@Override
 	public String toString() {
 		long timeInSecond = this.getFinishTime()/1000;
 		
-		return this.getName()+" " + timeInSecond + "s" + "\n";
+		return this.getName()+" " + timeInSecond + "s";
 	}
 	
 	
-	}
+}
 
