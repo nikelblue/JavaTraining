@@ -13,14 +13,14 @@ final class Account {
 		System.out.print(" withdraw " + amount);
 	}
 
-	public void nullOperation(int amount) {
+	public synchronized void nullOperation(int amount) {
 		balance += amount;
 		System.out.print(" deposit " + amount);
 		balance -= amount;
 		System.out.print(" withdraw " + amount);
 	}
 
-	public int getBalance() {
+	public synchronized int getBalance() {
 		return balance;
 	}
 }
