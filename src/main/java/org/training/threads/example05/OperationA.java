@@ -46,8 +46,10 @@ final class OperationA extends Thread {
 	public static void main(String[] args) {
 		Account compte = new Account();
 		for (int i = 0; i < 20; i++) {
+			
 			OperationA operation = new OperationA("A" + i, compte);
 			operation.start();
+			
 		}
 	}
 
