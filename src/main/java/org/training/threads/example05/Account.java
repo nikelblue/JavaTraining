@@ -5,12 +5,12 @@ final class Account {
 
 	public void deposit(int amount) {
 		balance += amount;
-		System.out.print(" deposit " + amount);
+		System.out.print(" deposit " + amount);		
 	}
 
 	public void withdraw(int amount) {
 		balance -= amount;
-		System.out.print(" withdraw " + amount);
+		System.out.print(" withdraw " + amount);		
 	}
 
 	public synchronized void nullOperation(int amount) {

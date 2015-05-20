@@ -21,11 +21,13 @@ final class OperationB extends Thread {
 			String name = getName();
 
 			System.out.print(name);
+			synchronized(account){
 			account.deposit(amount);
 			account.withdraw(amount);
+			}
 			int balance = account.getBalance();
 			System.out.println(" " + name);
-			
+
 			if (balance != 0) {
 				System.err.println(name + ":**balance=" + balance);
 				System.exit(1);
