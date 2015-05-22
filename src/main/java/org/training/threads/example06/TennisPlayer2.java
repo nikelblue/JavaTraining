@@ -1,6 +1,10 @@
 package org.training.threads.example06;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class TennisPlayer2 extends Player {
+	private static final Logger LOGGER = LoggerFactory.getLogger(TennisPlayer2.class);
 
 	public TennisPlayer2(String name, Object ball) {
 		super(name, ball);
@@ -13,7 +17,7 @@ public class TennisPlayer2 extends Player {
 				reachTheBall(); 
 
 				synchronized(ball) {
-					System.out.println(getName() + ": ping");
+					LOGGER.info("ping");
 					ball.notify(); //hit the ball
 				}
 				synchronized(ball) {

@@ -1,7 +1,11 @@
 package org.training.threads.example06;
 
-public class TennisPlayer1 extends Player {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+public class TennisPlayer1 extends Player {
+	private static final Logger LOGGER = LoggerFactory.getLogger(TennisPlayer1.class);
+	
 	public TennisPlayer1(String name, Object ball) {
 		super(name, ball);
 	}
@@ -17,7 +21,7 @@ public class TennisPlayer1 extends Player {
 				//Ball arrived. Go to catch it
 				reachTheBall();
 				synchronized(ball) {
-					System.out.println(getName() + ": pong");
+					LOGGER.info("pong");
 					ball.notify(); //Hit the ball
 				}
 			} catch (InterruptedException e) {
