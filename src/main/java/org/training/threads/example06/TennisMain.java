@@ -1,6 +1,6 @@
 package org.training.threads.example06;
 
-final class Main {
+final class TennisMain {
 
 	public static void main(String[] args) {
 		Object ball = new Object();
