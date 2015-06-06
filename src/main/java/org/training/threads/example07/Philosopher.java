@@ -4,9 +4,12 @@ import java.util.Random;
 
 abstract class Philosopher extends Thread{
 	private Random r = new Random();
+	
+	protected final Object speaker;
 
-	public Philosopher(String name) {
+	public Philosopher(String name, Object speaker) {
 		super(name);
+		this.speaker = speaker;
 	}
 	
 	protected void meditate() {

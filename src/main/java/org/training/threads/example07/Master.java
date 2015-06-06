@@ -15,18 +15,30 @@ public class Master extends Philosopher {
 			"12.Yes.",
 			"14.Very correct!"
 	};
-	
-	public Master(String name) {
-		super(name);
+
+	public Master(String name, Object speaker) {
+		super(name, speaker);
 	}
 
 	@Override
 	public void run() {
 		for (String sentence : sentences) {
-			meditate();
-			LOGGER.info(sentence);
+			try {
+				synchronized(speaker){
+					speaker.wait();
+				}
+				meditate();
+				synchronized(speaker){
+					LOGGER.info(sentence);
+					speaker.notify();
+				}
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
 		}
 	}
-	
-	
 }
+
+
+
