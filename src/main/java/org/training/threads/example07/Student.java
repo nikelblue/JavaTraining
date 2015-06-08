@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 public class Student extends Philosopher {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Student.class);
-	
+
 	private final String[] sentences = {
 			"1. Master?",
 			"3. I've notice people don't know how to communicate.",
@@ -16,17 +16,29 @@ public class Student extends Philosopher {
 			"13.And you are not allowed to speak anymore",
 			"15.Wow, in this way each of us will have same chance to speak."
 	};
-	
-	public Student(String name) {
-		super(name);
+
+	public Student(String name, Object speaker) {
+		super(name, speaker);
 	}
 
 
 	@Override
 	public void run() {
 		for (String sentence : sentences) {
-			LOGGER.info(sentence);
-			meditate();
+			try {
+				meditate();
+				synchronized(speaker){				
+					LOGGER.info(sentence);	
+					speaker.notify();
+				}
+									
+				synchronized(speaker){	
+					speaker.wait();
+				}
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
+

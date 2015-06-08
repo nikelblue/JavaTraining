@@ -10,8 +10,10 @@ final class PhilosophersMain {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Student player1 = new Student("Student");
-		Master player2 = new Master("Master ");
+		Object speaker = new Object();
+		
+		Student player1 = new Student("Student", speaker);
+		Master player2 = new Master("Master ", speaker);
 		
 		player1.start();
 		player2.start();
