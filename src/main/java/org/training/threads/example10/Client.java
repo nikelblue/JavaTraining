@@ -16,11 +16,11 @@ class Client {
 	//TODO: 1) Run the code as it is and analyze the performance of making calls to
 	//         SingleThreadedServer
 	public static void main(String[] args) {
-		Server server = new SingleThreadedServer();
+		//Server server = new SingleThreadedServer();
 		//TODO: 2) In order to improve execution time performance comment the line above
 		//		   and uncomment the line below (use MultiThreadedServer).
 		//		3) MultiThreadedServer is not implemented yet. Implement it!
-		//Server server = new MultiThreadedServer();
+		Server server = new MultiThreadedServer();
 
 		long start  = System.currentTimeMillis();
 		for (int i = 1; i <= NUM_REQUESTS; i++) {

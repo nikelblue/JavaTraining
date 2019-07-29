@@ -16,7 +16,14 @@ final class MultiThreadedServer extends Server{
 		//		   is not forced to wait for the previous request in order to call a new request.
 		// Hint: Using of anonymous classes might simplify the code. 
 		// https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html
-		throw new RuntimeException("Not implemented yet!!!"); //Remove this line
+		//throw new RuntimeException("Not implemented yet!!!"); //Remove this line
+		Thread reqestThread = new Thread(){
+			public void run() {
+				processRequest(request);
+			}
+		};
+
+		reqestThread.start();
 	}
 
 	private void processRequest(String request) {
